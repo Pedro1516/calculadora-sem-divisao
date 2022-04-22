@@ -12,8 +12,12 @@ btnnum.forEach((item, i) => {
 
 btnop.forEach((item, i) => {
   item.addEventListener('click', () => {
-    if(tela.innerText.length > 0){
+    if(tela.innerText.length > 0 && !estado){
     expressao.push(Number(tela.innerText))
+    expressao.push(item.value)
+    tela.innerText = ''
+  }
+  else if(estado){
     expressao.push(item.value)
     tela.innerText = ''
   }
@@ -24,6 +28,7 @@ btnigual.addEventListener('click', () => {
   if(tela.innerText.length > 0){
     expressao.push(Number(tela.innerText))
     tela.innerText = ''
+    estado = true
 
     let cp = 0
     let cs = 0
