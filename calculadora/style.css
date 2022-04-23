@@ -11,7 +11,7 @@ div.container{
   align-items: center;
   justify-content: center;
   border-radius: 10px;
-  box-shadow: 2px
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, .8);
   width: 220px;
   height: 240px;
   padding: 2px;
@@ -19,7 +19,9 @@ div.container{
 }
 
 div#tela{
-  background: gray;
+  background: rgba(200, 200, 200, .2);
+  color: lightgray;
+  border: 1px solid gray;
   width: 90%;
   height: 20px;
   margin: 5px;
@@ -41,5 +43,12 @@ input{
   width: 40px;
   height: 40px;
   border-radius: 10px;
+  border: none;
+  background: rgb(50, 50, 50);
+  color: white;
   margin-bottom: 4px;
+}
+
+input:hover{
+  background: rgb(60, 60, 60);
 }

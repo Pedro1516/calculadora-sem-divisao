@@ -28,7 +28,7 @@ btnop.forEach((item, i) => {
 })
 
 btnigual.addEventListener('click', () => {
-  if(tela.innerText.length > 0){
+  if(tela.innerText.length > 0 && expressao.length >= 2){
     expressao.push(Number(tela.innerText))
     tela.innerText = ''
     estado = true
