@@ -9,7 +9,6 @@ const btnop = document.querySelectorAll('.operador')
 var expressao = []
 var estado = false
 
-
 btnnum.forEach((item, i) => {
     item.addEventListener('click', () => {
         tela.innerText += item.value
@@ -25,6 +24,7 @@ btnop.forEach((item, i) => {
   }
   else if(estado){
     expressao.push(item.value)
+    expressao[0] = Number(tela.innerText)
     tela.innerText = ''
   }
   })
